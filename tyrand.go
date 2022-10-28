@@ -12,7 +12,7 @@ func main() {
 	rand.Seed(time.Now().UnixMicro())
 	args := os.Args[1:]
 	if len(args) == 0 {
-		fmt.Println(Tyrand(4))
+		fmt.Print(Tyrand(4))
 	} else {
 		fa := args[0]
 		i64, err := strconv.ParseInt(fa, 10, 32)
@@ -20,7 +20,7 @@ func main() {
 			panic(err)
 		}
 		for i := 0; i < int(i64); i++ {
-			fmt.Print(Tyrand(4))
+			fmt.Println(Tyrand(4))
 		}
 	}
 }
